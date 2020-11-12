@@ -85,7 +85,7 @@ for(i in 1:637){
  n=length(unique(bdays))
  if(n<35){
    profit=profit+1
- } else{profit=profit-2}
+ } else{profit=profit-4.50}
 }
 saveProfit[run]=profit
 }
@@ -95,6 +95,9 @@ saveProfit[run]=profit
 ```{r}
 hist(saveProfit)
 ```
+
+The chart shows that in order for this to be a fair bet with 35 students, the payout must be $4.50. 
+
 <!-- We recommend you use git branches -- create a separate branch for each major section i.e. Introduction, Methods, Results, Inferential Results, and Discussion and Conclusions - leave the YAML block untouched until the final merge where you put in your own name !-->
 
 # Introduction
