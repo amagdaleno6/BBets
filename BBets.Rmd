@@ -1,7 +1,7 @@
 ---
 title: "Brownlows Bets"
 author: "Alejandra Magdaleno"
-date: "November 12, 2020"
+date: "November 18, 2020"
 output: 
   html_document:
     number_sections: true
@@ -25,7 +25,8 @@ require(knitr)
  At the first day of class there are 35 students in Math Statistics class and professor Brownlow always proposes this bet to his students "I will wager $2 to your bet of $1 that at least two people in today's class have  the same birthday.  He tells me he has made that bet 637 times so far. Where do you think his profits are? Discuss this in a markdown document
 
 # Methods
-
+  
+  A resampling approach will be utilized in order to estimate what Professor Brownslow's profits are.  A 95% confidence interval will be used to find the approximate ranges of Professor Brownlow's profit.     
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
 
 
@@ -55,6 +56,7 @@ hist(saveProfit)
 ```
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
+The histogram shows a general estimate of Professor Brownlow's Bet winnings.  We will need to complete a 95% confidence interval in order to define a range of values that will contain the profit with a 95% of certainty.  
 
 # Confidence interval of Brownlows earning
 
@@ -66,6 +68,7 @@ print(sortProfit[975])
 The 95% confidence interval shows that the value would range from `r sortProfit[25]` to `r sortProfit[975]`.  The value will continue to change every time the code is run.
 <!--Explain and display your method of coming up with a 95% confidence interval of  professor Brownlows winnings (or losings)-->
 
+# Class Size for a fair 2:1 odds bet  
 
 ```{r}
 days=1:365
@@ -92,6 +95,8 @@ hist(saveProfit)
 
 Based on the histogram, the number of students needed in order to obtain a 2:1 ratio on the bet would be between 28 to 29 students. 
 
+# Fair odds for bet in a 35 person class.
+
 ```{r}
 days=1:365
 saveProfit=vector("numeric")
@@ -115,9 +120,10 @@ saveProfit[run]=profit
 hist(saveProfit)
 ```
 
-The chart shows that in order for this to be a fair bet with 35 students, the payout needs to be $4.50. 
+The histogram shows that in order for this to be a fair bet with 35 students, the payout would need to be approximately $4.50. 
 
 # Discussion and Conclusion
+
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 
