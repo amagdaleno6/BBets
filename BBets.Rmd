@@ -124,6 +124,7 @@ The histogram shows that in order for this to be a fair bet with 35 students, th
 
 # Discussion and Conclusion
 
+The 95% confidence interval shows that the value of Brownlows bets would range from `r sortProfit[25]` to `r sortProfit[975]`.  The value will change every time the code is run.  We were also able to compute that the number of students needed in order to obtain a 2:1 ratio would be between 28 and 29 students.  Lastly, the payout that Professor Brownlow would need to pay in order to make this a fair bet for a class of 35 students would need to be approximately $4.50. 
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 
